@@ -25,6 +25,10 @@
     <dependency>
       <groupId>com.google.android</groupId>
       <artifactId>android</artifactId>
+      <version>${android.platform}</version>
+      <scope>system</scope>
+      <systemPath>${env.ANDROID_HOME}/platforms/android-${android.platform}/android.jar</systemPath>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 

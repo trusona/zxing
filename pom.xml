@@ -88,6 +88,7 @@
     <!-- This can't reference project.version as some subprojects version differently -->
     <zxing.version>3.3.1-SNAPSHOT</zxing.version>
     <android.platform>26</android.platform>
+    <android.version>4.1.1.4</android.version>
   </properties>
 
   <build>
@@ -788,9 +789,10 @@
           <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
-            <scope>provided</scope>
-            <!-- <systemPath>${env.ANDROID_HOME}/platforms/android-${android.platform}/android.jar</systemPath> -->
+            <version>${android.platform}</version>
+            <scope>system</scope>
+            <systemPath>${env.ANDROID_HOME}/platforms/android-${android.platform}/android.jar</systemPath>
+            <optional>true</optional>
           </dependency>
         </dependencies>
       </dependencyManagement>
